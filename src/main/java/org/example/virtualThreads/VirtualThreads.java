@@ -3,7 +3,7 @@ package org.example.virtualThreads;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class VirtulThreadss {
+public class VirtualThreads {
 
     public static void main(String[] args) {
 
