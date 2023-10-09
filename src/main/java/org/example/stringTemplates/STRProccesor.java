@@ -1,5 +1,8 @@
 package org.example.stringTemplates;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 import static java.lang.StringTemplate.STR;
 
 public class STRProccesor {
@@ -49,6 +52,15 @@ public class STRProccesor {
         STRProccesor STRProccesor = org.example.stringTemplates.STRProccesor.of(value);
         String methodResult = STR. "channel name = \{ STRProccesor.getChannelName().toLowerCase() }" ;
         System.out.println(methodResult);
+    }
+
+    public static void innerFunctionInSTR() {
+        String dateSTR = STR. "Current date is \{
+                DateTimeFormatter
+                        .ofPattern("HH:mm:ss")
+                        .format(LocalTime.now())
+                } deneme12" ;
+        System.out.println(dateSTR);
     }
 
 
